@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Styles */
+@layer base {
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+        @apply bg-surface-dark text-gray-100 antialiased;
+        font-family: "Inter", sans-serif;
+    }
+
+    select {
+        color: #374151;
+    }
+
+    select option {
+        color: #374151;
+    }
+
+    :focus-visible {
+        @apply outline-2 outline-offset-2 outline-primary-500;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        * {
+            animation-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+}
+
+/* Components */
+@layer components {
+    .tap-target {
+        @apply min-h-[44px] min-w-[44px];
+    }
+
+    .card {
+        @apply bg-surface-card rounded-xl shadow-lg;
+    }
+
+    .gradient-text {
+        @apply bg-gradient-primary bg-clip-text text-transparent;
+    }
+}
+
+/* Toast */
+.toast-custom {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
